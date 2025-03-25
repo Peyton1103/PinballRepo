@@ -1153,6 +1153,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftBumper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 941789101651630573, guid: e0a95b34af3f53042be7535048e4f9d6, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.22763109
+      objectReference: {fileID: 0}
+    - target: {fileID: 941789101651630573, guid: e0a95b34af3f53042be7535048e4f9d6, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 6.880424
+      objectReference: {fileID: 0}
     - target: {fileID: 8544844015454202972, guid: e0a95b34af3f53042be7535048e4f9d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9
@@ -1419,7 +1427,7 @@ Transform:
   m_GameObject: {fileID: 1910280473}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.25, y: -0.4, z: 0}
+  m_LocalPosition: {x: 8.88, y: 12.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
