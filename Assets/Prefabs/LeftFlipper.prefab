@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 941789101651630573}
   - component: {fileID: 3808530925858526918}
   m_Layer: 0
-  m_Name: LeftBumper
+  m_Name: LeftFlipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

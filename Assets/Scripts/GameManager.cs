@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public bool isGameActive;
     public GameObject ball;
-    private int score;
+    public int score;
     public TextMeshProUGUI scoreText;
     public Button restartButton;
     public GameObject gameOverText;

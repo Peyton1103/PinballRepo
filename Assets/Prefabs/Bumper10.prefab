@@ -95,8 +95,9 @@ GameObject:
   - component: {fileID: 3451252953733614968}
   - component: {fileID: 8969841185064143936}
   - component: {fileID: 6957128349463764984}
+  - component: {fileID: 7105533321405963304}
   m_Layer: 0
-  m_Name: Bumper10 1
+  m_Name: Bumper10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,6 +201,20 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000009743168, y: -403941.84}
+  m_Offset: {x: -0.0071839704, y: 1987917.2}
   serializedVersion: 2
-  m_Radius: 0.5436934
+  m_Radius: 0.5836842
+--- !u!114 &7105533321405963304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172934557375650926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072b74dbc428ae443bd638209c9b7a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bumper10: {fileID: 9172934557375650926}
+  ball: {fileID: 4921950173394012056, guid: 393a935508aab544bb57eed72e87fcb5, type: 3}
