@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public Button restartButton;
     public GameObject gameOverText;
+    public int ballCount;
 
 
 
@@ -32,6 +33,22 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey(KeyCode.J) && Input.GetKey(KeyCode.L) && !isGameActive)
         {
             StartGame();
+            ballCount = 1;
+        }
+        // If ball drops below play area, removes the ball and ticks down ball count.
+        if (ball.transform.position.x > -6)
+        {
+            Destroy(gameObject);
+            ballCount -= 1;
+        }
+        if (isGameActive)
+        {
+            // If ball count hits 0, end the game. (I need your help with this)
+            if(ballCount == 0)
+            {
+                // Can't for the life of me remember how this works. Pls help.
+                Invoke(GameOver);
+            }
         }
     }
 

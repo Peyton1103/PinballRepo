@@ -18,7 +18,7 @@ public class BumperPoints : MonoBehaviour
 
     void OnTriggerEnter(Collider ball)
     {
-        Destroy(ball);
+        //Trying to get score to be added on collision and Idk why this won't work. Once it works, duplicate script for 50 and 100 bumpers.
         gM.score += 10;
     }
 }
