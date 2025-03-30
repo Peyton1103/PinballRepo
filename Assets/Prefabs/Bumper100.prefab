@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3451252953733614968}
   - component: {fileID: 8969841185064143936}
   - component: {fileID: 6957128349463764984}
+  - component: {fileID: 4816137826047617540}
   m_Layer: 0
   m_Name: Bumper100
   m_TagString: Untagged
@@ -203,3 +204,16 @@ CircleCollider2D:
   m_Offset: {x: 0.00000009743168, y: -403941.84}
   serializedVersion: 2
   m_Radius: 0.5436934
+--- !u!114 &4816137826047617540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172934557375650926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072b74dbc428ae443bd638209c9b7a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 100

@@ -24,31 +24,34 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ballCount = 1;
+        isGameActive = false;
+        gameOverText.gameObject.SetActive(false);
+        restartButton.gameObject.SetActive(false);
+        ball.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.J) && Input.GetKey(KeyCode.L) && !isGameActive)
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.DownArrow) && !isGameActive)
         {
             StartGame();
-            ballCount = 1;
+            ball.gameObject.SetActive(true);
+
         }
         // If ball drops below play area, removes the ball and ticks down ball count.
-        if (ball.transform.position.x > -6)
+        if (ball.transform.position.y < -15)
         {
-            Destroy(gameObject);
-            ballCount -= 1;
+            ball.gameObject.SetActive(false);
+            ballCount = (ballCount - 1);
         }
-        if (isGameActive)
+        if (isGameActive && ballCount == 0)
         {
-            // If ball count hits 0, end the game. (I need your help with this)
-            if(ballCount == 0)
-            {
-                // Can't for the life of me remember how this works. Pls help.
-                Invoke(GameOver);
-            }
+       
+               // Can't for the life of me remember how this works. Pls help.
+                GameOver();
+            
         }
     }
 
@@ -72,6 +75,11 @@ public class GameManager : MonoBehaviour
         UpdateScore(0);
         titleScreen.gameObject.SetActive(false);
        
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
