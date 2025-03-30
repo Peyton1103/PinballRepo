@@ -10,10 +10,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject titleScreen;
     public bool isGameActive;
+    public bool isGameOver;
     public GameObject ball;
     public int score;
     public TextMeshProUGUI scoreText;
-    public Button restartButton;
     public GameObject gameOverText;
     public int ballCount;
 
@@ -27,8 +27,8 @@ public class GameManager : MonoBehaviour
         ballCount = 1;
         isGameActive = false;
         gameOverText.gameObject.SetActive(false);
-        restartButton.gameObject.SetActive(false);
         ball.gameObject.SetActive(false);
+        isGameOver = false;
     }
 
     // Update is called once per frame
@@ -51,7 +51,13 @@ public class GameManager : MonoBehaviour
        
                // Can't for the life of me remember how this works. Pls help.
                 GameOver();
+
             
+        }
+
+        if (!isGameActive && isGameOver == true && Input.GetKey(KeyCode.J) && Input.GetKey(KeyCode.L))
+        {
+            RestartGame();
         }
     }
 
@@ -65,7 +71,8 @@ public class GameManager : MonoBehaviour
     {
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;
-        restartButton.gameObject.SetActive(true);
+        isGameOver = true;
+        
     }
 
     public void StartGame()

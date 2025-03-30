@@ -14,13 +14,13 @@ public class BumperPoints : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        FindObjectOfType<GameManager>();
+        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         //Trying to get score to be added on collision and Idk why this won't work. Once it works, duplicate script for 50 and 100 bumpers.
-        if (GameManager.isGameActive)
+        if (GameManager.isGameActive == true)
         {
             GameManager.UpdateScore(pointValue);
         }
