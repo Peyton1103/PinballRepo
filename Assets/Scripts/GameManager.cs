@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(false);
         ball.gameObject.SetActive(false);
         isGameOver = false;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -58,6 +59,11 @@ public class GameManager : MonoBehaviour
         if (!isGameActive && isGameOver == true && Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.Alpha7))
         {
             RestartGame();
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 
