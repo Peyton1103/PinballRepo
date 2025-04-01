@@ -19,7 +19,7 @@ public class LeftController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) && GameManager.isGameActive == true)
+        if (Input.GetKeyDown(KeyCode.Z) && GameManager.isGameActive == true)
         {
             leftBumperRb.AddForce(Vector3.up * leftBumperForce, (ForceMode2D)ForceMode.Impulse);
         }

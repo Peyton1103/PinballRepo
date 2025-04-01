@@ -19,7 +19,7 @@ public class RightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) && GameManager.isGameActive == true)
+        if (Input.GetKeyDown(KeyCode.Alpha7) && GameManager.isGameActive == true)
         {
             rightBumperRb.AddForce(Vector3.up * rightBumperForce, (ForceMode2D)ForceMode.Impulse);
         }

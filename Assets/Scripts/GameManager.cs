@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.DownArrow) && !isGameActive)
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.DownArrow) && !isGameActive && !isGameOver)
         {
             StartGame();
             ball.gameObject.SetActive(true);
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
             
         }
 
-        if (!isGameActive && isGameOver == true && Input.GetKey(KeyCode.J) && Input.GetKey(KeyCode.L))
+        if (!isGameActive && isGameOver == true && Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.Alpha7))
         {
             RestartGame();
         }
